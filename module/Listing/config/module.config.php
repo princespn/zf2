@@ -38,7 +38,7 @@ namespace Listing;
 
      'view_manager' => array(
          'template_path_stack' => array(
-             'album' => __DIR__ . '/../view',
+             'listing' => __DIR__ . '/../view',
          ),
      ),
  );
