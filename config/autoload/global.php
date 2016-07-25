@@ -25,4 +25,8 @@
                      => 'Zend\Db\Adapter\AdapterServiceFactory',
          ),
      ),
+     'module_layouts' => array(
+        'Application' => 'layout/layout.phtml',
+        'Social' => 'layout/social.phtml',
+    ),
  );
