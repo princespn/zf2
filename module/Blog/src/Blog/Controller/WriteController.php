@@ -21,7 +21,7 @@
          $this->postForm    = $postForm;
      }
 
-     public function addAction()
+      public function addAction()
      {
          $request = $this->getRequest();
 
@@ -30,21 +30,21 @@
 
              if ($this->postForm->isValid()) {
                  try {
+                     //print_r($this->postForm->getData());
                      $this->postService->savePost($this->postForm->getData());
 
                      return $this->redirect()->toRoute('blog');
                  } catch (\Exception $e) {
+                     die($e->getMessage());
                      // Some DB Error happened, log it and let the user know
                  }
              }
          }
-
          return new ViewModel(array(
              'form' => $this->postForm
          ));
      }
-     
-     
+
      public function editAction()
      {
          $request = $this->getRequest();
